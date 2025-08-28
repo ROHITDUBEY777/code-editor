@@ -4,11 +4,7 @@
         "strict": true,
         "target": "ESNEXT",
         "module": "NODENEXT",
-        "outDir": "./dist-electron",
+        "outDir": "../../dist-electron",
         "skipLibCheck": true
     }
 }
-
-
-
-

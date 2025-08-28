@@ -1,0 +1,16 @@
+ {
+    "appId":"com.alpha.app",
+    "files":["dist-electron","dist-react"],
+    "icons":"./monitor.png",
+     "mac":{
+        "target":"dmg"
+     },
+     "linux":{
+        "target":"AppImage",
+        "category":"Utility"
+     },
+     "win":{
+        "target":["portable","msi"]
+     }
+
+}
