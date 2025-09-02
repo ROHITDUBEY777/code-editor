@@ -1,14 +1,15 @@
 import osUtils from 'os-utils';
 
-const POLLING_INTERVAL = 500 ;
+const POLLING_INTERVAL = 1000;
 
-export function pollResources(){
+export function PollResources(){
+    
     setInterval(()=>{
         getCpuUsage()
-    },POLLING_INTERVAL)
+    },POLLING_INTERVAL);
     
+}
 
 function getCpuUsage(){
-        osUtils.cpuUsage((percentage)=>console.log(percentage));
-}
+   osUtils.cpuUsage((percentage)=>console.log(percentage));
 }

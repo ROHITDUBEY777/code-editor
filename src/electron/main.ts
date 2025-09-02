@@ -1,19 +1,20 @@
-import  { app , BrowserWindow } from 'electron';
-import path from 'path';
+const   { app , BrowserWindow } = require('electron');
+const path = require('path');
 import {isDev} from './util.js';
-import {pollResources} from './resourceManager.js'
+import {PollResources} from './resourceManager.js'
 // type test = string ;
 
 app.on('ready',()=>{
     const mainWindow = new BrowserWindow({});
-    if(isDev() ) {
-        mainWindow.loadFile('http://localhost:5024/');
+    if( isDev() ) {
+        mainWindow.loadURL('http://localhost:5024/');
     }
     else{
 
-        mainWindow.loadFile(path.join(app.getAppPath() + '/dist-react/index.html' ));
+        mainWindow.loadFile(path.join(app.getAppPath(), '/dist-react/index.html' ));
     }
-    pollResources();
+    
+    PollResources();
 })
 
     
